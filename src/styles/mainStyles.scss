@@ -1,0 +1,55 @@
+$text-color-element: rgba(255, 255, 255, 0.86);
+
+$blue-principal: rgb(0, 195, 255);
+$orange-optional: rgb(255, 140, 0);
+$red-danger: rgb(255, 53, 53);
+
+$blue-principal-hover: rgb(106, 220, 255);
+$orange-optional-hover: rgb(255, 200, 132);
+$red-danger-hover: rgb(255, 143, 143);
+
+$blue-principal-opaque: rgb(159, 233, 255);
+$text-black-hover: rgba(0, 0, 0, 0.638);
+$nav-heigth: 1.5cm;
+
+@mixin button-main-style {
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: max-content;
+    color: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(63, 63, 63, 0.371);
+}
+
+@mixin principal($interactive: false) {
+    background-color: $blue-principal;
+
+    @if($interactive) {
+        &:hover {
+            background-color: $blue-principal-hover;
+            color: $text-black-hover;
+        }
+    }
+}
+
+@mixin optional($interactive: false) {
+    background-color: $orange-optional;
+
+    @if($interactive) {
+        &:hover {
+            background-color: $orange-optional-hover;
+            color: $text-black-hover;
+        }
+    }
+}
+
+@mixin danger($interactive: false) {
+    background-color: $red-danger;
+
+    @if($interactive) {
+        &:hover {
+            background-color: $red-danger-hover;
+            color: $text-black-hover;
+        }
+    }
+}

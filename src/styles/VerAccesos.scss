@@ -1,0 +1,19 @@
+form.form-ver-accesos {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 40rem;
+
+    div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        &:last-child {
+            justify-content: space-around;
+            margin: 2rem 0rem;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@use "mainStyles" as main;
+
+nav {
+    background-color: main.$blue-principal;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+
+    ul {
+        margin: 0 2rem;
+    }
+}
+
+.content-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    height: main.$nav-heigth;
+    align-items: center;
+
+    .nav-item {
+        &:not(button) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: main.$nav-heigth;
+        }
+    }
+
+    p.nav-item {
+        margin: 0 1rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    a.nav-item {
+        @include main.principal(true);
+        width: 8rem;
+        background-color: rgba(255, 255, 255, 0.27);
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        margin: 0 0.25rem;
+    }
+
+    button.nav-item {
+        align-self: center;
+        margin-left: 2rem;
+    }
+
+}
